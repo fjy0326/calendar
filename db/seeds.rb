@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+10.times do |i|
+  Event.create!(
+    title: "サンプルイベント#{i+1}",
+    start: Time.zone.now + i.days,
+    end: Time.zone.now + i.days + 1.hour
+  )
+end
+
